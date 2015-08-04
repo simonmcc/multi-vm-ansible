@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: false
+
+  tasks:
+    - ping:
+    - shell: uname -a
+      register: UNAME
+    - debug: var=UNAME
